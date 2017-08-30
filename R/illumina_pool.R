@@ -12,7 +12,7 @@ illumina.pool <- function(stock.conc, df=NULL, read.share=NULL, pool.conc=10, po
   {
     df <- rep(1, length(stock.conc))
   }
-  if(length(dilution) != length(stock.conc))
+  if(length(df) != length(stock.conc))
   {
     stop("Number of stock.concs or dilutions does not match!!\n")
   }
