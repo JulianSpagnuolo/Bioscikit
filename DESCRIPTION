@@ -1,0 +1,13 @@
+Package: biotools
+Type: Package
+Title: Biotools
+Version: 0.1.0
+Date: 2017-04-04
+Author: Julian Spagnuolo
+Maintainer: Julian Spagnuolo <julianspagnuolo@gmail.com>
+Description: A collection of functions for common calculations useful for bench biologists using R notebooks as an electronic lab book.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+requires: ggplot2, scales
+suggests: ggsci
