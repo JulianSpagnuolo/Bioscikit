@@ -1,4 +1,4 @@
-elisa.data <- function(data, assay.name, )
+elisa.data <- function(data, assay.name)
 {
 
 }
