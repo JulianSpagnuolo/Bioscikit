@@ -35,16 +35,16 @@ illumina.pool <- function(stock.conc, df=NULL, read.share=NULL, pool.conc=10, po
   results$stock.conc <- stock.conc
   results$read.share <- read.share
   results$df <- df
-  results$conc.in.pool <- (pool.conc*read.share)/sum(read.share)
-  results$vol.to.add <- (results$conc.in.pool*pool.vol)/(stock.conc/df)
+  results$conc.in.pool <- round((pool.conc*read.share)/sum(read.share), digits=3)
+  results$vol.to.add <- round((results$conc.in.pool*pool.vol)/(stock.conc/df), digits=2)
 
   if(sum(results$vol.to.add) > pool.vol)
   {
     warning("Total volume of pooled libraries exceeeds desired total pool volume, adjust parameters!!\n", immediate. = TRUE)
   }
 
-  cat("Total volume of libraries to pool: ", sum(results$vol.to.add)," uL (microlitres)\n")
-  cat("Volume of diluent to add: ", pool.vol-sum(results$vol.to.add)," uL (microlitres)\n")
+  cat("Total volume of libraries to pool: ", round(sum(results$vol.to.add), digits=2)," uL (microlitres)\n")
+  cat("Volume of diluent to add: ", round(pool.vol-sum(results$vol.to.add), digits=2)," uL (microlitres)\n")
 
   if(print == TRUE)
   {
