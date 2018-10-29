@@ -1,12 +1,15 @@
 illumina.pool <- function(stock.conc, df=NULL, read.share=NULL, pool.conc=10, pool.vol=20, print=TRUE)
 #' @author Julian Spagnuolo
 #' @title Pooling Illumina Libraries
-#' @param stock.conc numeric vector. Initial (stock) concentrations of inidivual libraries to be pooled in nM.
+#' @param stock.conc numeric vector. Initial (stock) concentrations of indivual libraries to be pooled in nM.
 #' @param df numeric vector. Dilution factor of inidividual libraries to be pooled (if they should be diluted before poolling). If NULL then it uses the stock concentration. Length must equal that of stock.conc. Default is NULL.
 #' @param read.share numeric vector. Share of reads that each independent library will take in the total pool. Length must equal that of stock.conc, if NULL will default to 1 (i.e. equal shares). Default is NULL.
 #' @param pool.conc numeric. Final overall concentration of the pooled library in nM. Default is 10 nM.
 #' @param pool.vol numeric. Final desired volume of the pooled library in uL. Default is 20 uL.
 #' @param print logical. Whether to print results to console, does not affect printing of diluent volume or other summary stats. Default is TRUE.
+#' 
+#' 
+#' @export
 {
   if(is.null(df))
   {
